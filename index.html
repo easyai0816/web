@@ -48,7 +48,7 @@
     .step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:10px;background:#1b2250;display:grid;place-items:center;border:1px solid var(--line);font-weight:800;color:var(--brand-2)}
     .price{display:flex;align-items:baseline;gap:.3rem;font-weight:900}
     .price b{font-size:1.8rem}
-    .badge{background:#172046;border:1px solid var(--line);padding:.25rem .5rem;border-radius:8px;font-size:.8rem;color:#var(--brand-2);font-weight:700}
+    .badge{background:#172046;border:1px solid var(--line);padding:.25rem .5rem;border-radius:8px;font-size:.8rem;color:var(--brand-2);font-weight:700}
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     @media (max-width:700px){.gallery{grid-template-columns:1fr 1fr}}
     .footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.95rem}
@@ -57,10 +57,17 @@
     .note{font-size:.9rem;color:var(--muted)}
     .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
     @media (max-width:900px){.contact{grid-template-columns:1fr}}
-    input,textarea{width:100%;background:#0d1330;border:1px solid var(--line);border-radius:12px;color:#0b1020;color:var(--ink);padding:.9rem}
+    input,textarea{width:100%;background:#0d1330;border:1px solid var(--line);border-radius:12px;color:var(--ink);padding:.9rem}
     label{font-size:.9rem;color:var(--muted)}
     .toast{position:fixed;right:16px;bottom:16px;background:#0f172a;color:#e5e7eb;border:1px solid var(--line);padding:.7rem 1rem;border-radius:12px;box-shadow:var(--shadow);opacity:0;transform:translateY(6px);transition:.25s}
     .toast.show{opacity:1;transform:translateY(0)}
+
+    /* 聯絡我們強化 */
+    .contact-cta{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+    @media (max-width:700px){.contact-cta{grid-template-columns:1fr}}
+    .btn.full{width:100%;justify-content:center}
+    .divider{display:flex;align-items:center;gap:.6rem;color:var(--muted);font-size:.9rem;margin:12px 0}
+    .divider:before,.divider:after{content:"";flex:1;height:1px;background:var(--line)}
   </style>
   <script type="application/ld+json">
   {
@@ -160,9 +167,9 @@
           <p class="muted">適合剛起步的商家</p>
           <div class="price"><span>NT$</span><b>10,000</b></div>
           <ul>
-             <li>1 個頁面 3 個區塊 </li>
-             <li>可協助辦理FB粉絲團</li>
-             <li>範本改字改圖</li>
+            <li>1 個頁面 3 個區塊</li>
+            <li>可協助辦理FB粉絲團</li>
+            <li>範本改字改圖</li>
           </ul>
           <a href="#contact" class="btn" aria-label="洽詢入門方案">洽詢此方案</a>
         </div>
@@ -180,7 +187,7 @@
         <div class="card">
           <h3>學生｜專題/APP 輔導</h3>
           <p class="muted">彈性排課 · 里程碑陪跑</p>
-          <div class="price"><span>NT$</span><b>15,000</b> </div>
+          <div class="price"><span>NT$</span><b>15,000</b></div>
           <ul>
             <li>題目/技術/簡報 協助</li>
             <li>每週進度表與檢核清單</li>
@@ -196,7 +203,7 @@
     <section id="work" class="section container">
       <h2>近期作品 / Demo</h2>
       <div class="gallery">
-        <!-- 新增：成功案例｜展榮印刷網站 -->
+        <!-- 成功案例｜展榮印刷網站 -->
         <a class="card" href="https://brook11.github.io/WEB/" target="_blank" rel="noopener" title="展榮印刷網站">
           <div style="display:grid;place-items:center;height:180px;border-radius:12px;background:linear-gradient(135deg,#1f2a54,#0b1020);">
             <div style="text-align:center">
@@ -208,25 +215,26 @@
         </a>
         <!-- 既有示意圖 -->
         <div class="card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="網站設計案例 1"></div>
-
         <div class="card"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop" alt="APP 輔導案例"></div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact（強化 & 已串寄信） -->
     <section id="contact" class="section container">
       <h2>聯絡我們</h2>
       <div class="grid">
+        <!-- 左：快速聯絡說明 -->
         <div class="card">
-
-          <!-- 依照需求：刪除 deep link & 網頁版的提示區塊 -->
-
-          <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin:.6rem 0 1rem">
-            <a class="btn" href="https://line.me/R/ti/p/@984vcizh?from=page&searchId=984vcizh" target="_blank" rel="noopener" aria-label="加 LINE@">@ 加入 LINE@</a>
-            <a class="btn secondary" href="https://www.facebook.com/profile.php?id=61579710781872" target="_blank" rel="noopener" aria-label="Facebook 粉絲團">Facebook 粉絲團</a>
+          <h3 style="margin-top:0">最快方式</h3>
+          <p class="muted">歡迎先加 <b>LINE@</b> 詢問估價；也可到 <b>Facebook 粉絲團</b> 留言。</p>
+          <div class="contact-cta">
+            <a class="btn full" href="https://line.me/R/ti/p/@984vcizh?from=page&searchId=984vcizh" target="_blank" rel="noopener" aria-label="加入 LINE@">@ 加入 LINE@</a>
+            <a class="btn secondary full" href="https://www.facebook.com/profile.php?id=61579710781872" target="_blank" rel="noopener" aria-label="Facebook 粉絲團">Facebook 粉絲團</a>
           </div>
 
-          <form class="grid two" onsubmit="event.preventDefault(); showToast('已收到您的訊息，我們將盡快回覆！'); this.reset();">
+
+          <h3 style="margin-top:0">留下需求</h3>
+          <form id="contactForm" class="grid two">
             <div>
               <label for="name">您的姓名</label>
               <input id="name" name="name" required placeholder="王小明">
@@ -239,13 +247,18 @@
               <label for="msg">您的需求</label>
               <textarea id="msg" name="message" rows="5" placeholder="請簡述想做的網站或專題、預算、時程…"></textarea>
             </div>
+
+            <!-- 反機器人蜜罐（隱藏） -->
+            <input type="text" name="hp_field" style="display:none">
+            <!-- 來源網址（自動帶入） -->
+            <input type="hidden" name="source" id="source">
+
             <div style="grid-column:1/-1;display:flex;gap:.6rem;align-items:center">
               <button class="btn" type="submit">送出訊息</button>
               <a class="btn secondary" href="#top">回到頂部</a>
             </div>
           </form>
         </div>
-
       </div>
     </section>
   </main>
@@ -266,21 +279,53 @@
     // 年份
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // 複製 LINE@
-    function copyLineId(){
-      const id = document.getElementById('lineId').textContent.trim();
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(id).then(()=>showToast('已複製 LINE@：' + id));
-      } else {
-        const ta = document.createElement('textarea');
-        ta.value = id; document.body.appendChild(ta);
-        ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
-        showToast('已複製 LINE@：' + id);
-      }
+    // 自動帶入來源網址
+    const src = document.getElementById('source');
+    if (src) src.value = window.location.href;
+
+    // 送出到 Apps Script（你的 Web App 連結）
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbycG0gRpwPtJ-MueGs5WLEnUc14A50XN0ZF897PHl73BiKYIAhEFckqyIST-C3ZtmnA/exec';
+
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const payload = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          message: form.message.value.trim(),
+          source: window.location.href
+        };
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
+
+        try {
+          // 正常路徑（可得到成功狀態）
+          const res = await fetch(GAS_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (!res.ok) throw new Error('bad status');
+          form.reset();
+          showToast('已送出，我們將盡快回覆您！');
+        } catch (err) {
+          // 備援：no-cors
+          try {
+            const fd = new FormData(form);
+            await fetch(GAS_URL, { method: 'POST', mode: 'no-cors', body: fd });
+            form.reset();
+            showToast('已送出（備援模式），我們將盡快回覆您！');
+          } catch (e2) {
+            showToast('送出失敗，請稍後再試或改用 LINE@ 聯絡 🙏');
+          }
+        } finally {
+          if (submitBtn) submitBtn.disabled = false;
+        }
+      });
     }
-    const btnCopy1 = document.getElementById('btn-copy');
-    if (btnCopy1) btnCopy1.addEventListener('click', copyLineId);
-    document.getElementById('copy2').addEventListener('click', copyLineId);
 
     // Toast 小提醒
     function showToast(msg){
@@ -288,13 +333,6 @@
       t.textContent=msg; t.classList.add('show');
       setTimeout(()=>t.classList.remove('show'), 2200);
     }
-
-    // Hero CTA：導向聯絡區塊（保留原本行為）
-    const cta = document.getElementById('cta-line');
-    if (cta) cta.addEventListener('click', e=>{
-      const el = document.getElementById('contact');
-      if (el) el.scrollIntoView({behavior:'smooth'});
-    });
   </script>
 </body>
 </html>
