@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>專案開發｜簡單AI數位工作室</title>
+  <style>
+    body{margin:0;font:16px/1.6 system-ui;background:#0b1020;color:#e6e9f2}
+    .container{max-width:1100px;margin:auto;padding:20px}
+    .btn{display:inline-block;padding:.7rem 1rem;border-radius:12px;
+         background:linear-gradient(90deg,#6ee7b7,#60a5fa);color:#0b1020;
+         font-weight:700;text-decoration:none}
+    .card{background:#121833;border:1px solid #1f2a54;border-radius:16px;
+          padding:22px;margin-bottom:30px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    h1{font-size:clamp(26px,4vw,40px);margin-bottom:16px}
+    h2{color:#6ee7b7;margin-top:0}
+    ul{margin:0;padding-left:1.2rem}
+    li{margin-bottom:.5rem}
+    .footer{border-top:1px solid #1f2a54;padding:20px 0;text-align:center;color:#aab1c6;font-size:.9rem}
+
+    /* 新增：雙欄版面 */
+    .project-grid{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr; /* 左文右圖 */
+      gap:20px;
+      align-items:center;
+    }
+.project-grid img{
+  width:100%;
+  max-width:360px;
+  height:240px;       /* 固定高度 */
+  object-fit:cover;   /* 填滿框，維持比例，但多餘部分裁切 */
+  border-radius:12px;
+  display:block;
+  margin:auto;
+}
+    @media(max-width:800px){
+      .project-grid{grid-template-columns:1fr} /* 手機版改單欄 */
+      .project-grid img{max-width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <a href="index.html" class="btn">← 回首頁</a>
+  </header>
+
+  <main class="container">
+    <h1>專案開發</h1>
+    <p>我們提供 AI 與軟體專案開發服務，以下兩個方向能協助你快速落地：</p>
+
+    <!-- AI 客服 -->
+    <div class="card project-grid">
+      <div>
+        <h2>🤖 AI 客服 · 知識庫驅動</h2>
+        <p>將 AI 與你的專屬知識庫結合，能快速回覆使用者問題，減少人工客服壓力：</p>
+        <ul>
+          <li>整合公司公告、FAQ、內部文件</li>
+          <li>即時回覆常見問題，提高服務效率</li>
+          <li>支援文字搜尋 + AI 推理，回答更精準</li>
+        </ul>
+      </div>
+      <div>
+        <img src="img/1.jpg" alt="AI 客服示意圖">
+      </div>
+    </div>
+
+    <!-- AI + 演算法 -->
+    <div class="card project-grid">
+      <div>
+        <h2>📊 AI + 演算法 · 智慧推薦</h2>
+        <p>結合 AI 與演算法，幫助你得到真正想要的結果與決策支持：</p>
+        <ul>
+          <li>商品 / 內容推薦（個人化體驗）</li>
+          <li>最佳化演算（例如庫存、排程、配對）</li>
+          <li>資料分析 → 提供趨勢、洞察與自動化決策</li>
+        </ul>
+      </div>
+      <div>
+        <img src="img/2.jpg" alt="AI 演算法示意圖">
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    © <span id="y"></span> 簡單AI數位工作室 · 專案開發
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
