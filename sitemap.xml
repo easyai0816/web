@@ -8,13 +8,19 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- 其他頁面（例如有 contact.html 或 blog.html）就加在下面 -->
-  <!--
+  <!-- 專案開發頁 -->
+  <url>
+    <loc>https://easyai0816.github.io/web/projects.html</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 聯絡頁 -->
   <url>
     <loc>https://easyai0816.github.io/web/contact.html</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  -->
 </urlset>
